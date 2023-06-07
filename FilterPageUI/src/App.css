@@ -1,0 +1,227 @@
+/* App.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #C3DBE6;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.signout-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signout-button:hover {
+  background-color: #c0392b;
+}
+
+.addtowishlist-button {
+  background-color: #979797;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Add this line to position the filter box */
+  top: 35%; /* Add this line to position the filter box below the filter button */
+  right: 0;
+  margin-right: 20px;
+}
+
+.addtowishlist-button:hover {
+  background-color: #818080;
+}
+
+.viewallwishlist-button {
+  background-color: #5db6c6;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Add this line to position the filter box */
+  top: -50%; /* Add this line to position the filter box below the filter button */
+  right: 0;
+  margin-right: 20px;
+}
+
+.viewallwishlist-button:hover {
+  background-color: #4b94a1;
+}
+
+/* Content styles */
+.content {
+  padding: 20px;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "ITC Franklin Gothic";
+}
+
+.filter-section {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.filter-box {
+  position: absolute; /* Add this line to position the filter box */
+  top: 100%; /* Add this line to position the filter box below the filter button */
+  right: 0; /* Add this line to align the filter box to the right */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Add this line to make the filter box appear above other elements */
+
+}
+
+.filter-box::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.filter-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.filter-button,
+.wishlist-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover,
+.wishlist-button:hover {
+  background-color: #2980b9;
+}
+
+.range-inputs{
+  margin-left: 10px;
+}
+
+.clear-filter-button {
+  margin-left: 10px; /* Add margin to the clear filter button */
+}
+
+.sort-select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  color: #333;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+/* Wishlist icon */
+.wishlist-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #3498db;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.wishlist-icon.wishlist-added {
+  background-color: #3498db;
+}
+
+.wishlist-icon:before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 6px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+.sort-by {
+  margin-top: 20px;
+}
+
+.sort-by-dropdown {
+  margin-top: 10px;
+}
+
+.sort-by-dropdown label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.sort-by-dropdown select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Additional styles as needed */
+
